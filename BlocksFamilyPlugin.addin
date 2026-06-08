@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+
+  <!-- Application entry point – registers dockable panel and ribbon tab -->
+  <AddIn Type="Application">
+    <Name>Blocks Family Plugin</Name>
+    <Assembly>BlocksFamilyPlugin.dll</Assembly>
+    <FullClassName>BlocksFamilyPlugin.App</FullClassName>
+    <ClientId>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</ClientId>
+    <VendorId>BLOCKS</VendorId>
+    <VendorDescription>Blocks Family Plugin for Autodesk Revit</VendorDescription>
+  </AddIn>
+
+</RevitAddIns>

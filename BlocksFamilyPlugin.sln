@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksFamilyPlugin", "BlocksFamilyPlugin.csproj", "{69881091-F78D-4084-9427-936940382C05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69881091-F78D-4084-9427-936940382C05}.Debug|x64.ActiveCfg = Debug|x64
+		{69881091-F78D-4084-9427-936940382C05}.Debug|x64.Build.0 = Debug|x64
+		{69881091-F78D-4084-9427-936940382C05}.Release|x64.ActiveCfg = Release|x64
+		{69881091-F78D-4084-9427-936940382C05}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C962C190-5D7F-42D5-9788-E2F2FE597B58}
+	EndGlobalSection
+EndGlobal

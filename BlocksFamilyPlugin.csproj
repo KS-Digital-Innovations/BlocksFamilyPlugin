@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>BlocksFamilyPlugin</AssemblyName>
+    <RootNamespace>BlocksFamilyPlugin</RootNamespace>
+    <Nullable>enable</Nullable>
+    <LangVersion>12</LangVersion>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <!-- Revit API -->
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <!--
+    FamilyLibrary.json → embedded directly into the DLL.
+    Read via Assembly.GetManifestResourceStream — no file-system path needed.
+  -->
+  <ItemGroup>
+    <EmbeddedResource Include="BlocksFamilyPlugin\Resources\FamilyLibrary.json">
+      <LogicalName>BlocksFamilyPlugin.Resources.FamilyLibrary.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!--
+    Styles.xaml → compiled as BAML (Page) and embedded in the DLL.
+    Loaded via pack://application URI — no loose file needed.
+    The SDK auto-discovers it as a Page; no explicit <Page> entry required.
+  -->
+
+  <!-- Copy .addin manifest next to the DLL for ribbon-mode deployment -->
+  <ItemGroup>
+    <None Update="BlocksFamilyPlugin.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
